@@ -9,21 +9,9 @@ fun main() {
     val hoursInSpace = minutesInSpace / 60
     val currentMinutes = minutesInSpace % 60
 
-    val list: Array<Int> = arrayOf(hoursInSpace, currentMinutes, currentSeconds)
-
-    var h = "$hoursInSpace"
-    var m = "$currentMinutes"
-    var s = "$currentSeconds"
-
-    list.forEach {
-        if (it < 10 && it == hoursInSpace) {
-            h = "0$hoursInSpace"
-        } else if (it < 10 && it == currentMinutes) {
-            m = "0$currentMinutes"
-        } else if (it < 10 && it == currentSeconds) {
-            s = "0$currentSeconds"
-        }
-    }
+    val h = String.format("%02d", hoursInSpace)
+    val m = String.format("%02d", currentMinutes)
+    val s = String.format("%02d", currentSeconds)
 
     println("$h:$m:$s")
 }
