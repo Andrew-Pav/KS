@@ -1,13 +1,14 @@
 package org.example.lesson1
 
+const val SEXAGESIMAL_SYSTEM = 60
 fun main() {
     val secondsInSpace = 6480
 
-    val minutesInSpace = secondsInSpace / 60
-    val currentSeconds = secondsInSpace % 60
+    val minutesInSpace = secondsInSpace / SEXAGESIMAL_SYSTEM
+    val currentSeconds = secondsInSpace % SEXAGESIMAL_SYSTEM
 
-    val hoursInSpace = minutesInSpace / 60
-    val currentMinutes = minutesInSpace % 60
+    val hoursInSpace = minutesInSpace / SEXAGESIMAL_SYSTEM
+    val currentMinutes = minutesInSpace % SEXAGESIMAL_SYSTEM
 
     val h = String.format("%02d", hoursInSpace)
     val m = String.format("%02d", currentMinutes)
